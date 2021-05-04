@@ -1,0 +1,486 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7581E337CADDE503708B5BD0 /* Pods_BarcodeReader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2741C6FDB76F6447294C3DA8 /* Pods_BarcodeReader.framework */; };
+		FA43B74D263D6C3D0026E7A9 /* TTS.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA43B74C263D6C3D0026E7A9 /* TTS.swift */; };
+		FA609BE8263EAC52008DAC89 /* KakaoCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA609BE6263EAC51008DAC89 /* KakaoCommon.framework */; };
+		FA609BEB263EAC68008DAC89 /* KakaoNewtoneSpeech.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA609BEA263EAC68008DAC89 /* KakaoNewtoneSpeech.framework */; };
+		FA609BED263EAC8C008DAC89 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA609BEC263EAC8C008DAC89 /* AudioToolbox.framework */; };
+		FA609BEF263EAC95008DAC89 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FA609BEE263EAC95008DAC89 /* libiconv.tbd */; };
+		FA609BF1263EAC9C008DAC89 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FA609BF0263EAC9C008DAC89 /* libc++.tbd */; };
+		FABF2532261C3FC60059F678 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABF2531261C3FC60059F678 /* AppDelegate.swift */; };
+		FABF2534261C3FC60059F678 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABF2533261C3FC60059F678 /* SceneDelegate.swift */; };
+		FABF2536261C3FC60059F678 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABF2535261C3FC60059F678 /* ViewController.swift */; };
+		FABF2539261C3FC60059F678 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FABF2537261C3FC60059F678 /* Main.storyboard */; };
+		FABF253B261C3FC70059F678 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FABF253A261C3FC70059F678 /* Assets.xcassets */; };
+		FABF253E261C3FC70059F678 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FABF253C261C3FC70059F678 /* LaunchScreen.storyboard */; };
+		FABF2547261C3FD40059F678 /* ReaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABF2546261C3FD40059F678 /* ReaderView.swift */; };
+		FAEB26F626272E0000C09108 /* ServerAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEB26F526272E0000C09108 /* ServerAddress.swift */; };
+		FAEB26F926272E1D00C09108 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEB26F826272E1D00C09108 /* Networking.swift */; };
+		FAEB26FD26272FE500C09108 /* ProductVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEB26FC26272FE500C09108 /* ProductVO.swift */; };
+		FAEB2700262733EA00C09108 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEB26FF262733EA00C09108 /* Utils.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2741C6FDB76F6447294C3DA8 /* Pods_BarcodeReader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BarcodeReader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		49EB3BF268FDBB1A1C51460A /* Pods-BarcodeReader.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BarcodeReader.debug.xcconfig"; path = "Target Support Files/Pods-BarcodeReader/Pods-BarcodeReader.debug.xcconfig"; sourceTree = "<group>"; };
+		F68498C9A83AE4829EF2084B /* Pods-BarcodeReader.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BarcodeReader.release.xcconfig"; path = "Target Support Files/Pods-BarcodeReader/Pods-BarcodeReader.release.xcconfig"; sourceTree = "<group>"; };
+		FA43B74C263D6C3D0026E7A9 /* TTS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTS.swift; sourceTree = "<group>"; };
+		FA609BE6263EAC51008DAC89 /* KakaoCommon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KakaoCommon.framework; sourceTree = "<group>"; };
+		FA609BEA263EAC68008DAC89 /* KakaoNewtoneSpeech.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KakaoNewtoneSpeech.framework; sourceTree = "<group>"; };
+		FA609BEC263EAC8C008DAC89 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		FA609BEE263EAC95008DAC89 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
+		FA609BF0263EAC9C008DAC89 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		FABF252E261C3FC60059F678 /* BarcodeReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BarcodeReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FABF2531261C3FC60059F678 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FABF2533261C3FC60059F678 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		FABF2535261C3FC60059F678 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FABF2538261C3FC60059F678 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FABF253A261C3FC70059F678 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FABF253D261C3FC70059F678 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FABF253F261C3FC70059F678 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FABF2546261C3FD40059F678 /* ReaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ReaderView.swift; path = ../../ReaderView.swift; sourceTree = "<group>"; };
+		FAEB26F526272E0000C09108 /* ServerAddress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerAddress.swift; sourceTree = "<group>"; };
+		FAEB26F826272E1D00C09108 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		FAEB26FC26272FE500C09108 /* ProductVO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductVO.swift; sourceTree = "<group>"; };
+		FAEB26FF262733EA00C09108 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FABF252B261C3FC60059F678 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA609BF1263EAC9C008DAC89 /* libc++.tbd in Frameworks */,
+				FA609BEF263EAC95008DAC89 /* libiconv.tbd in Frameworks */,
+				FA609BED263EAC8C008DAC89 /* AudioToolbox.framework in Frameworks */,
+				7581E337CADDE503708B5BD0 /* Pods_BarcodeReader.framework in Frameworks */,
+				FA609BE8263EAC52008DAC89 /* KakaoCommon.framework in Frameworks */,
+				FA609BEB263EAC68008DAC89 /* KakaoNewtoneSpeech.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		199F4674C7EE58AE4F59333A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FA609BF0263EAC9C008DAC89 /* libc++.tbd */,
+				FA609BEE263EAC95008DAC89 /* libiconv.tbd */,
+				FA609BEC263EAC8C008DAC89 /* AudioToolbox.framework */,
+				FA609BE6263EAC51008DAC89 /* KakaoCommon.framework */,
+				FA609BEA263EAC68008DAC89 /* KakaoNewtoneSpeech.framework */,
+				2741C6FDB76F6447294C3DA8 /* Pods_BarcodeReader.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DD331FD27586D07A3BDDB879 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				49EB3BF268FDBB1A1C51460A /* Pods-BarcodeReader.debug.xcconfig */,
+				F68498C9A83AE4829EF2084B /* Pods-BarcodeReader.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		FABF2525261C3FC60059F678 = {
+			isa = PBXGroup;
+			children = (
+				FABF2530261C3FC60059F678 /* BarcodeReader */,
+				FABF252F261C3FC60059F678 /* Products */,
+				DD331FD27586D07A3BDDB879 /* Pods */,
+				199F4674C7EE58AE4F59333A /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		FABF252F261C3FC60059F678 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FABF252E261C3FC60059F678 /* BarcodeReader.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FABF2530261C3FC60059F678 /* BarcodeReader */ = {
+			isa = PBXGroup;
+			children = (
+				FAEB26F426272DED00C09108 /* Util */,
+				FAEB26FB26272FD400C09108 /* Model */,
+				FABF2531261C3FC60059F678 /* AppDelegate.swift */,
+				FABF2533261C3FC60059F678 /* SceneDelegate.swift */,
+				FABF2535261C3FC60059F678 /* ViewController.swift */,
+				FABF2546261C3FD40059F678 /* ReaderView.swift */,
+				FABF2537261C3FC60059F678 /* Main.storyboard */,
+				FABF253A261C3FC70059F678 /* Assets.xcassets */,
+				FABF253C261C3FC70059F678 /* LaunchScreen.storyboard */,
+				FABF253F261C3FC70059F678 /* Info.plist */,
+			);
+			path = BarcodeReader;
+			sourceTree = "<group>";
+		};
+		FAEB26F426272DED00C09108 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				FAEB26F526272E0000C09108 /* ServerAddress.swift */,
+				FAEB26F826272E1D00C09108 /* Networking.swift */,
+				FAEB26FF262733EA00C09108 /* Utils.swift */,
+				FA43B74C263D6C3D0026E7A9 /* TTS.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		FAEB26FB26272FD400C09108 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FAEB26FC26272FE500C09108 /* ProductVO.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FABF252D261C3FC60059F678 /* BarcodeReader */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FABF2542261C3FC70059F678 /* Build configuration list for PBXNativeTarget "BarcodeReader" */;
+			buildPhases = (
+				CB8B6F156292E25372240CEC /* [CP] Check Pods Manifest.lock */,
+				FABF252A261C3FC60059F678 /* Sources */,
+				FABF252B261C3FC60059F678 /* Frameworks */,
+				FABF252C261C3FC60059F678 /* Resources */,
+				414FE484F44A20514436268E /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BarcodeReader;
+			productName = BarcodeReader;
+			productReference = FABF252E261C3FC60059F678 /* BarcodeReader.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FABF2526261C3FC60059F678 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					FABF252D261C3FC60059F678 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+				};
+			};
+			buildConfigurationList = FABF2529261C3FC60059F678 /* Build configuration list for PBXProject "BarcodeReader" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FABF2525261C3FC60059F678;
+			productRefGroup = FABF252F261C3FC60059F678 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FABF252D261C3FC60059F678 /* BarcodeReader */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FABF252C261C3FC60059F678 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FABF253E261C3FC70059F678 /* LaunchScreen.storyboard in Resources */,
+				FABF253B261C3FC70059F678 /* Assets.xcassets in Resources */,
+				FABF2539261C3FC60059F678 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		414FE484F44A20514436268E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BarcodeReader/Pods-BarcodeReader-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BarcodeReader/Pods-BarcodeReader-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BarcodeReader/Pods-BarcodeReader-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CB8B6F156292E25372240CEC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BarcodeReader-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FABF252A261C3FC60059F678 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FABF2536261C3FC60059F678 /* ViewController.swift in Sources */,
+				FABF2547261C3FD40059F678 /* ReaderView.swift in Sources */,
+				FABF2532261C3FC60059F678 /* AppDelegate.swift in Sources */,
+				FAEB26F926272E1D00C09108 /* Networking.swift in Sources */,
+				FA43B74D263D6C3D0026E7A9 /* TTS.swift in Sources */,
+				FABF2534261C3FC60059F678 /* SceneDelegate.swift in Sources */,
+				FAEB26F626272E0000C09108 /* ServerAddress.swift in Sources */,
+				FAEB26FD26272FE500C09108 /* ProductVO.swift in Sources */,
+				FAEB2700262733EA00C09108 /* Utils.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		FABF2537261C3FC60059F678 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FABF2538261C3FC60059F678 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FABF253C261C3FC70059F678 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FABF253D261C3FC70059F678 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FABF2540261C3FC70059F678 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FABF2541261C3FC70059F678 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FABF2543261C3FC70059F678 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 49EB3BF268FDBB1A1C51460A /* Pods-BarcodeReader.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DRZA772VG4;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = BarcodeReader/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = itllbegone.BarcodeReader;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FABF2544261C3FC70059F678 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F68498C9A83AE4829EF2084B /* Pods-BarcodeReader.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DRZA772VG4;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = BarcodeReader/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = itllbegone.BarcodeReader;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FABF2529261C3FC60059F678 /* Build configuration list for PBXProject "BarcodeReader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FABF2540261C3FC70059F678 /* Debug */,
+				FABF2541261C3FC70059F678 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FABF2542261C3FC70059F678 /* Build configuration list for PBXNativeTarget "BarcodeReader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FABF2543261C3FC70059F678 /* Debug */,
+				FABF2544261C3FC70059F678 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FABF2526261C3FC60059F678 /* Project object */;
+}

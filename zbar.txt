@@ -1,0 +1,43 @@
+#import "ZBarSDK.h"
+
+// 바코드 스캐너 실행 버튼 생성 
+// 버튼 코드
+
+
+// 바코드 스캐너 실행 코드
+
+-(IBAction)barcode_scanning{
+	ZBarReaderViewController *reader = [ZBarReaderViewController new]; // 카메라 피드에서 스캔하는 바코드 리더
+
+	reader = [ZBarReaderViewController new];
+	reader.readerDelegate = self;
+
+	ZBarImageScanner *scanner = reader.scanner; // 이미지 스캐너
+
+	[scanner setSymbology:ZBAR_I25 config:ZBAR_CFG_ENABLE to:0];
+	
+	[self presentModalViewController:reader animated:YES];
+
+	[scanner release];
+	[reader release];
+}
+
+// 결과 표시
+-(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
+
+	id<NSFastEnumeration> results = [info objectForKey:ZBarReaderControllerResults];
+
+	
+
+	ZBarSymbol *symbol = nil;
+
+	for(symbol in results)
+
+		break;
+
+
+	result_num.text = symbol.data; // 바코드 데이터 스캔 결과
+
+
+	[self dismissModalViewControllerAnimated:YES];
+}
