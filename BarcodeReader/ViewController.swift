@@ -7,15 +7,12 @@
 
 import UIKit
 import AVFoundation
-import ZBarSDK
-import KakaoNewtoneSpeech
 
 class ViewController: UIViewController {
     
 
     
     @IBOutlet var QRReaderView: ReaderView!
-    let reader = ZBarReaderViewController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,7 +22,7 @@ class ViewController: UIViewController {
 
     }
     override func viewDidAppear(_ animated: Bool) {
-//        initKakaoTTS()
+
     }
     override func viewDidLayoutSubviews() {
         initQRReaderView(QRReaderView: QRReaderView)
@@ -93,33 +90,5 @@ extension ViewController: ReaderViewDelegate {
                 alert.dismiss(animated: true, completion: nil)
             }
         }
-    }
-    
-    
-    
-    
-    
-}
-
-extension ViewController: MTTextToSpeechDelegate {
-    func onFinished() {
-        print("onFinished")
-    }
-    
-    func onError(_ errorCode: MTTextToSpeechError, message: String!) {
-        print("onErr")
-    }
-    
-    func initKakaoTTS() -> Void {
-        let kakaoTTSConfig = [
-//            "TextToSpeechConfigKeySpeechSpeed" : 1,
-            "TextToSpeechConfigKeyVoiceType" : "TextToSpeechVoiceTypeWomanDialog"
-//            "TextToSpeechConfigServiceMode" : "NewtoneTalk_1"
-        ] as! Dictionary<AnyHashable, Any>
-        let kakaoTTS = MTTextToSpeechClient(config: kakaoTTSConfig)
-        kakaoTTS!.delegate = self
-        
-        kakaoTTS!.play("이것은 카카오 음성!")
-//        kakaoTTS!.play("ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ")
-    }
+    } 
 }
