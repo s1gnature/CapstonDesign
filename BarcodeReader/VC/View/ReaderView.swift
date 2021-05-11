@@ -190,7 +190,6 @@ extension ReaderView {
     func capturePhoto() {
         var capturedPhotoImage: UIImage?
         self.photoOutput.capturePhoto(with: AVCapturePhotoSettings(), delegate: self)
-        
     }
 }
 
@@ -219,6 +218,9 @@ extension ReaderView: AVCaptureMetadataOutputObjectsDelegate {
 
 // MARK: - Capture Photo
 extension ReaderView: AVCapturePhotoCaptureDelegate {
+    func photoOutput(_ output: AVCapturePhotoOutput, willCapturePhotoFor resolvedSettings: AVCaptureResolvedPhotoSettings) {
+        AudioServicesDisposeSystemSoundID(1108)
+    }
     func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?){
         guard let photoData = photo.fileDataRepresentation() else {
             print("## Get PhotoData Failure")
