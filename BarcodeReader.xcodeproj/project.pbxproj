@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		709304DBDE4E6E483A440D77 /* Pods_BarcodeReader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2741C6FDB76F6447294C3DA8 /* Pods_BarcodeReader.framework */; };
 		FA219FC026492058004C53E6 /* ReaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA219FBF26492058004C53E6 /* ReaderView.swift */; };
+		FA219FC826492968004C53E6 /* labels.txt in Resources */ = {isa = PBXBuildFile; fileRef = FA219FC626492968004C53E6 /* labels.txt */; };
+		FA219FC926492968004C53E6 /* model.tflite in Resources */ = {isa = PBXBuildFile; fileRef = FA219FC726492968004C53E6 /* model.tflite */; };
+		FA219FCC26492B24004C53E6 /* ModelDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA219FCB26492B23004C53E6 /* ModelDataHandler.swift */; };
+		FA219FD326492C4F004C53E6 /* CVPixelBufferExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA219FD226492C4F004C53E6 /* CVPixelBufferExtension.swift */; };
+		FA219FD726492DBB004C53E6 /* VC2.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA219FD626492DBB004C53E6 /* VC2.swift */; };
 		FA43B74D263D6C3D0026E7A9 /* TTS.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA43B74C263D6C3D0026E7A9 /* TTS.swift */; };
 		FABF2532261C3FC60059F678 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABF2531261C3FC60059F678 /* AppDelegate.swift */; };
 		FABF2534261C3FC60059F678 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABF2533261C3FC60059F678 /* SceneDelegate.swift */; };
@@ -29,6 +34,11 @@
 		FA219FBF26492058004C53E6 /* ReaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReaderView.swift; sourceTree = "<group>"; };
 		FA219FC3264925D3004C53E6 /* ko */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = ko; path = ko.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FA219FC4264925D4004C53E6 /* ko */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = ko; path = ko.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FA219FC626492968004C53E6 /* labels.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = labels.txt; sourceTree = "<group>"; };
+		FA219FC726492968004C53E6 /* model.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; path = model.tflite; sourceTree = "<group>"; };
+		FA219FCB26492B23004C53E6 /* ModelDataHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelDataHandler.swift; sourceTree = "<group>"; };
+		FA219FD226492C4F004C53E6 /* CVPixelBufferExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CVPixelBufferExtension.swift; sourceTree = "<group>"; };
+		FA219FD626492DBB004C53E6 /* VC2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VC2.swift; sourceTree = "<group>"; };
 		FA43B74C263D6C3D0026E7A9 /* TTS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTS.swift; sourceTree = "<group>"; };
 		FA609BEC263EAC8C008DAC89 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		FA609BEE263EAC95008DAC89 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
@@ -77,6 +87,51 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		FA219FC526492948004C53E6 /* TFModel */ = {
+			isa = PBXGroup;
+			children = (
+				FA219FC626492968004C53E6 /* labels.txt */,
+				FA219FC726492968004C53E6 /* model.tflite */,
+			);
+			path = TFModel;
+			sourceTree = "<group>";
+		};
+		FA219FCA26492ADB004C53E6 /* TF */ = {
+			isa = PBXGroup;
+			children = (
+				FA219FC526492948004C53E6 /* TFModel */,
+				FA219FD126492C30004C53E6 /* Extension */,
+				FA219FCB26492B23004C53E6 /* ModelDataHandler.swift */,
+			);
+			path = TF;
+			sourceTree = "<group>";
+		};
+		FA219FD126492C30004C53E6 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				FA219FD226492C4F004C53E6 /* CVPixelBufferExtension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		FA219FD426492D9B004C53E6 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				FA219FD526492DA9004C53E6 /* View */,
+				FABF2535261C3FC60059F678 /* ViewController.swift */,
+				FA219FD626492DBB004C53E6 /* VC2.swift */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		FA219FD526492DA9004C53E6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FA219FBF26492058004C53E6 /* ReaderView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		FABF2525261C3FC60059F678 = {
 			isa = PBXGroup;
 			children = (
@@ -98,12 +153,12 @@
 		FABF2530261C3FC60059F678 /* BarcodeReader */ = {
 			isa = PBXGroup;
 			children = (
+				FA219FCA26492ADB004C53E6 /* TF */,
 				FAEB26F426272DED00C09108 /* Util */,
 				FAEB26FB26272FD400C09108 /* Model */,
-				FABF2531261C3FC60059F678 /* AppDelegate.swift */,
+				FA219FD426492D9B004C53E6 /* VC */,
 				FABF2533261C3FC60059F678 /* SceneDelegate.swift */,
-				FABF2535261C3FC60059F678 /* ViewController.swift */,
-				FA219FBF26492058004C53E6 /* ReaderView.swift */,
+				FABF2531261C3FC60059F678 /* AppDelegate.swift */,
 				FABF2537261C3FC60059F678 /* Main.storyboard */,
 				FABF253A261C3FC70059F678 /* Assets.xcassets */,
 				FABF253C261C3FC70059F678 /* LaunchScreen.storyboard */,
@@ -190,9 +245,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA219FC926492968004C53E6 /* model.tflite in Resources */,
 				FABF253E261C3FC70059F678 /* LaunchScreen.storyboard in Resources */,
 				FABF253B261C3FC70059F678 /* Assets.xcassets in Resources */,
 				FABF2539261C3FC60059F678 /* Main.storyboard in Resources */,
+				FA219FC826492968004C53E6 /* labels.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -231,11 +288,14 @@
 				FABF2536261C3FC60059F678 /* ViewController.swift in Sources */,
 				FA219FC026492058004C53E6 /* ReaderView.swift in Sources */,
 				FABF2532261C3FC60059F678 /* AppDelegate.swift in Sources */,
+				FA219FD726492DBB004C53E6 /* VC2.swift in Sources */,
 				FAEB26F926272E1D00C09108 /* Networking.swift in Sources */,
+				FA219FD326492C4F004C53E6 /* CVPixelBufferExtension.swift in Sources */,
 				FA43B74D263D6C3D0026E7A9 /* TTS.swift in Sources */,
 				FABF2534261C3FC60059F678 /* SceneDelegate.swift in Sources */,
 				FAEB26F626272E0000C09108 /* ServerAddress.swift in Sources */,
 				FAEB26FD26272FE500C09108 /* ProductVO.swift in Sources */,
+				FA219FCC26492B24004C53E6 /* ModelDataHandler.swift in Sources */,
 				FAEB2700262733EA00C09108 /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
