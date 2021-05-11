@@ -13,7 +13,7 @@
 		FA219FC926492968004C53E6 /* model.tflite in Resources */ = {isa = PBXBuildFile; fileRef = FA219FC726492968004C53E6 /* model.tflite */; };
 		FA219FCC26492B24004C53E6 /* ModelDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA219FCB26492B23004C53E6 /* ModelDataHandler.swift */; };
 		FA219FD326492C4F004C53E6 /* CVPixelBufferExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA219FD226492C4F004C53E6 /* CVPixelBufferExtension.swift */; };
-		FA219FD726492DBB004C53E6 /* VC2.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA219FD626492DBB004C53E6 /* VC2.swift */; };
+		FA219FD726492DBB004C53E6 /* TestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA219FD626492DBB004C53E6 /* TestVC.swift */; };
 		FA43B74D263D6C3D0026E7A9 /* TTS.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA43B74C263D6C3D0026E7A9 /* TTS.swift */; };
 		FABF2532261C3FC60059F678 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABF2531261C3FC60059F678 /* AppDelegate.swift */; };
 		FABF2534261C3FC60059F678 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABF2533261C3FC60059F678 /* SceneDelegate.swift */; };
@@ -38,7 +38,7 @@
 		FA219FC726492968004C53E6 /* model.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; path = model.tflite; sourceTree = "<group>"; };
 		FA219FCB26492B23004C53E6 /* ModelDataHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelDataHandler.swift; sourceTree = "<group>"; };
 		FA219FD226492C4F004C53E6 /* CVPixelBufferExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CVPixelBufferExtension.swift; sourceTree = "<group>"; };
-		FA219FD626492DBB004C53E6 /* VC2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VC2.swift; sourceTree = "<group>"; };
+		FA219FD626492DBB004C53E6 /* TestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestVC.swift; sourceTree = "<group>"; };
 		FA43B74C263D6C3D0026E7A9 /* TTS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTS.swift; sourceTree = "<group>"; };
 		FA609BEC263EAC8C008DAC89 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		FA609BEE263EAC95008DAC89 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
@@ -119,7 +119,7 @@
 			children = (
 				FA219FD526492DA9004C53E6 /* View */,
 				FABF2535261C3FC60059F678 /* ViewController.swift */,
-				FA219FD626492DBB004C53E6 /* VC2.swift */,
+				FA219FD626492DBB004C53E6 /* TestVC.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -288,7 +288,7 @@
 				FABF2536261C3FC60059F678 /* ViewController.swift in Sources */,
 				FA219FC026492058004C53E6 /* ReaderView.swift in Sources */,
 				FABF2532261C3FC60059F678 /* AppDelegate.swift in Sources */,
-				FA219FD726492DBB004C53E6 /* VC2.swift in Sources */,
+				FA219FD726492DBB004C53E6 /* TestVC.swift in Sources */,
 				FAEB26F926272E1D00C09108 /* Networking.swift in Sources */,
 				FA219FD326492C4F004C53E6 /* CVPixelBufferExtension.swift in Sources */,
 				FA43B74D263D6C3D0026E7A9 /* TTS.swift in Sources */,

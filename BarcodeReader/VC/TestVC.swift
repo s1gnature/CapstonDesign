@@ -1,48 +1,51 @@
 //
-//  ViewController.swift
+//  VC2.swift
 //  BarcodeReader
 //
-//  Created by mong on 2021/04/06.
+//  Created by mong on 2021/05/10.
 //
 
+import Foundation
 import UIKit
-import AVFoundation
 
-class ViewController: UIViewController {
-
-    @IBOutlet var QRReaderView: ReaderView!
+class TestVC: UIViewController {
+    @IBOutlet var testReaderView: ReaderView!
+    @IBOutlet var testImageView: UIImageView!
+    
+    private var modelDataHandler = ModelDataHandler(modelFileInfo: MobileNet.modelInfo, labelsFileInfo: MobileNet.labelsInfo)
     
     override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        self.QRReaderView.delegate = self
-        self.view.addSubview(QRReaderView)
-    }
-    override func viewDidAppear(_ animated: Bool) {
-        QRReaderView.start()
-    }
-    override func viewWillDisappear(_ animated: Bool) {
-        QRReaderView.stop(isButtonTap: true)
+        self.testReaderView.delegate = self
+        self.view.addSubview(testReaderView)
     }
     override func viewDidLayoutSubviews() {
-        initQRReaderView(QRReaderView: QRReaderView)
-    }
-    @IBAction func TFTestBtn(_ sender: Any) {
-        let image = QRReaderView.capturePhoto()
+        initReaderView(readerView: testReaderView)
     }
     
+    @IBAction func backBtn(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    @IBAction func captureBtn(_ sender: Any) {
+        let image = testReaderView.capturePhoto()
+    }
     
 }
-
+/*
+guard let buffer = CVImageBuffer.buffer(from: imageView.image!) else {
+    return
+}
+var result = modelDataHandler?.runModel(onFrame: buffer)
+dump(result)
+*/
 // MARK: - initReaderView
-private func initQRReaderView(QRReaderView: ReaderView){
-    QRReaderView.start()
+private func initReaderView(readerView: ReaderView){
+    readerView.start()
 }
 
 // MARK: - ReaderView
-extension ViewController: ReaderViewDelegate {
+extension TestVC: ReaderViewDelegate {
     func captureComplete(image: UIImage?) {
-//        self.testImageView.image = image
+        self.testImageView.image = image
     }
     
     func readerComplete(status: ReaderStatus) {
@@ -89,14 +92,14 @@ extension ViewController: ReaderViewDelegate {
         }
         
         let okAction = UIAlertAction(title: "확인", style: .default, handler: {(_) in
-            self.QRReaderView.start()
+            self.testReaderView.start()
         })
         alert.addAction(okAction)
         self.present(alert, animated: true) {
             DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
-                self.QRReaderView.start()
+                self.testReaderView.start()
                 alert.dismiss(animated: true, completion: nil)
             }
         }
-    } 
+    }
 }

@@ -16,60 +16,97 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cL5-Rg-mmi">
-                                <rect key="frame" x="10" y="50" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gtU-QH-X2a">
-                                <rect key="frame" x="350" y="50" width="53" height="49"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" systemColor="systemPinkColor"/>
-                                <state key="normal" image="terminal.fill" catalog="system"/>
-                                <connections>
-                                    <action selector="TFTestBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VCN-Xr-MqY"/>
-                                </connections>
-                            </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KE9-B4-gkm" customClass="ReaderView" customModule="BarcodeReader" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="194" width="414" height="702"/>
+                                <rect key="frame" x="0.0" y="94" width="414" height="802"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gtU-QH-X2a">
+                                <rect key="frame" x="347" y="50" width="50" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                <color key="tintColor" systemColor="systemPinkColor"/>
+                                <state key="normal" title="Test"/>
+                                <connections>
+                                    <action selector="TFTestBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VCN-Xr-MqY"/>
+                                    <segue destination="01K-sm-AKe" kind="presentation" modalPresentationStyle="fullScreen" id="m7j-or-m7c"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="KE9-B4-gkm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="EeS-12-R3V"/>
-                            <constraint firstItem="KE9-B4-gkm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="150" id="SYr-bj-3X6"/>
+                            <constraint firstItem="KE9-B4-gkm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="SYr-bj-3X6"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KE9-B4-gkm" secondAttribute="trailing" id="fTT-wK-mKw"/>
                             <constraint firstAttribute="bottom" secondItem="KE9-B4-gkm" secondAttribute="bottom" id="ri6-0x-mZk"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="QRReaderView" destination="KE9-B4-gkm" id="uze-xR-1qj"/>
-                        <outlet property="testImageView" destination="cL5-Rg-mmi" id="Ekc-py-Alw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="82.608695652173921" y="88.392857142857139"/>
         </scene>
-        <!--VC2-->
+        <!--TestVC-->
         <scene sceneID="P0A-Rv-Yvj">
             <objects>
-                <viewController storyboardIdentifier="VC2" useStoryboardIdentifierAsRestorationIdentifier="YES" id="01K-sm-AKe" customClass="VC2" customModule="BarcodeReader" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TestVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="01K-sm-AKe" customClass="TestVC" customModule="BarcodeReader" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="scf-N1-IhV">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="njc-RD-gki">
-                                <rect key="frame" x="87" y="194" width="240" height="432"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qET-4i-pdl">
+                                <rect key="frame" x="10" y="49" width="20" height="22"/>
+                                <color key="tintColor" systemColor="systemPinkColor"/>
+                                <state key="normal" image="arrow.backward" catalog="system"/>
+                                <connections>
+                                    <action selector="backBtn:" destination="01K-sm-AKe" eventType="touchUpInside" id="6Gv-0y-IhC"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vkq-LV-oRa" customClass="ReaderView" customModule="BarcodeReader" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="296" width="414" height="600"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="600" id="Ht9-23-n05"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TcE-75-1I8">
+                                <rect key="frame" x="314" y="49" width="90" height="22"/>
+                                <color key="tintColor" systemColor="systemPinkColor"/>
+                                <state key="normal" title="Capture" image="camera.fill" catalog="system">
+                                    <color key="titleColor" systemColor="systemPinkColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="captureBtn:" destination="01K-sm-AKe" eventType="touchUpInside" id="Wze-Yk-saO"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JvK-aY-uMh">
+                                <rect key="frame" x="10" y="81" width="200" height="205"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="mRd-rx-2Rr"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="hyz-Iu-4ff"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="hyz-Iu-4ff" firstAttribute="trailing" secondItem="Vkq-LV-oRa" secondAttribute="trailing" id="7JP-Hd-yc5"/>
+                            <constraint firstItem="Vkq-LV-oRa" firstAttribute="leading" secondItem="hyz-Iu-4ff" secondAttribute="leading" id="LjW-vs-OdP"/>
+                            <constraint firstItem="Vkq-LV-oRa" firstAttribute="top" secondItem="JvK-aY-uMh" secondAttribute="bottom" constant="10" id="O64-qd-91J"/>
+                            <constraint firstAttribute="bottom" secondItem="Vkq-LV-oRa" secondAttribute="bottom" id="Umh-w2-9c8"/>
+                            <constraint firstItem="JvK-aY-uMh" firstAttribute="top" secondItem="qET-4i-pdl" secondAttribute="bottom" constant="10" id="VCp-80-VyY"/>
+                            <constraint firstItem="JvK-aY-uMh" firstAttribute="leading" secondItem="hyz-Iu-4ff" secondAttribute="leading" constant="10" id="YgD-Zm-rAV"/>
+                            <constraint firstItem="qET-4i-pdl" firstAttribute="top" secondItem="hyz-Iu-4ff" secondAttribute="top" constant="5" id="e3Z-pw-oZa"/>
+                            <constraint firstAttribute="trailing" secondItem="TcE-75-1I8" secondAttribute="trailing" constant="10" id="mbk-kg-v75"/>
+                            <constraint firstItem="TcE-75-1I8" firstAttribute="top" secondItem="hyz-Iu-4ff" secondAttribute="top" constant="5" id="ohA-Vd-wcF"/>
+                            <constraint firstItem="qET-4i-pdl" firstAttribute="leading" secondItem="hyz-Iu-4ff" secondAttribute="leading" constant="10" id="x0N-MI-6ko"/>
+                        </constraints>
                     </view>
                     <connections>
-                        <outlet property="imageView" destination="njc-RD-gki" id="pSo-tK-ujP"/>
+                        <outlet property="testImageView" destination="JvK-aY-uMh" id="NL8-IK-UNe"/>
+                        <outlet property="testReaderView" destination="Vkq-LV-oRa" id="hab-FL-hVh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ikP-pP-nrQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -78,7 +115,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="terminal.fill" catalog="system" width="128" height="93"/>
+        <image name="arrow.backward" catalog="system" width="128" height="98"/>
+        <image name="camera.fill" catalog="system" width="128" height="94"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
