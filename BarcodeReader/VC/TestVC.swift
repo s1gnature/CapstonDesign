@@ -7,10 +7,12 @@
 
 import Foundation
 import UIKit
+import AVFoundation
 
 class TestVC: UIViewController {
     @IBOutlet var testReaderView: ReaderView!
     @IBOutlet var testImageView: UIImageView!
+    @IBOutlet var productRankLabelStack: UIStackView!
     
     private var modelDataHandler = ModelDataHandler(modelFileInfo: MobileNet.modelInfo, labelsFileInfo: MobileNet.labelsInfo)
     
@@ -22,6 +24,24 @@ class TestVC: UIViewController {
         initReaderView(readerView: testReaderView)
     }
     
+    @IBAction func videoRunningSwitch(_ sender: UISwitch) {
+        /*
+        if sender.isOn {
+            testReaderView.isVideoRunning = true
+            let metadataOutput = AVCaptureMetadataOutput()
+            metadataOutput.metadataObjectTypes = [.ean8, .ean13, .code128, .code93, .code39, .code39Mod43]
+            metadataOutput.setMetadataObjectsDelegate(testReaderView, queue: DispatchQueue.main)
+            testReaderView.captureSession?.addOutput(metadataOutput)
+        }
+        else {
+            testReaderView.isVideoRunning = false
+            let metadataOutput = AVCaptureMetadataOutput()
+            metadataOutput.metadataObjectTypes = [.ean8, .ean13, .code128, .code93, .code39, .code39Mod43]
+            metadataOutput.setMetadataObjectsDelegate(testReaderView, queue: DispatchQueue.main)
+            testReaderView.captureSession?.removeOutput(metadataOutput)
+        }
+ */
+    }
     @IBAction func backBtn(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
@@ -30,13 +50,8 @@ class TestVC: UIViewController {
     }
     
 }
-/*
-guard let buffer = CVImageBuffer.buffer(from: imageView.image!) else {
-    return
-}
-var result = modelDataHandler?.runModel(onFrame: buffer)
-dump(result)
-*/
+
+
 // MARK: - initReaderView
 private func initReaderView(readerView: ReaderView){
     readerView.start()
@@ -45,7 +60,21 @@ private func initReaderView(readerView: ReaderView){
 // MARK: - ReaderView
 extension TestVC: ReaderViewDelegate {
     func captureComplete(image: UIImage?) {
-        self.testImageView.image = image
+        guard let image = image else {
+            print("## Captured Image is Nil")
+            return
+        }
+        self.testImageView.image = UIImage(named: "sprite")!
+        guard let buffer = CVImageBuffer.buffer(from: UIImage(named: "sprite")!) else {
+            return
+        }
+        if let result = modelDataHandler?.runModel(onFrame: buffer) {
+            dump(result)
+            for idx in 0..<3 {
+                let label = productRankLabelStack.arrangedSubviews[idx] as! UILabel
+                label.text = "\(result.inferences[idx].label): \(result.inferences[idx].confidence * 100)%"
+            }
+        }
     }
     
     func readerComplete(status: ReaderStatus) {

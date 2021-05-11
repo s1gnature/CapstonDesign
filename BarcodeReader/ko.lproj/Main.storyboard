@@ -58,7 +58,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qET-4i-pdl">
-                                <rect key="frame" x="10" y="49" width="20" height="22"/>
+                                <rect key="frame" x="10" y="49" width="19.5" height="22"/>
                                 <color key="tintColor" systemColor="systemPinkColor"/>
                                 <state key="normal" image="arrow.backward" catalog="system"/>
                                 <connections>
@@ -73,7 +73,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TcE-75-1I8">
-                                <rect key="frame" x="314" y="49" width="90" height="22"/>
+                                <rect key="frame" x="314.5" y="49" width="89.5" height="22"/>
                                 <color key="tintColor" systemColor="systemPinkColor"/>
                                 <state key="normal" title="Capture" image="camera.fill" catalog="system">
                                     <color key="titleColor" systemColor="systemPinkColor"/>
@@ -88,23 +88,63 @@
                                     <constraint firstAttribute="width" constant="200" id="mRd-rx-2Rr"/>
                                 </constraints>
                             </imageView>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pwq-S5-oTc">
+                                <rect key="frame" x="182.5" y="45" width="51" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="49" id="9qv-dD-Cep"/>
+                                    <constraint firstAttribute="height" constant="31" id="cO9-of-m3x"/>
+                                </constraints>
+                                <color key="onTintColor" systemColor="systemPinkColor"/>
+                                <connections>
+                                    <action selector="videoRunningSwitch:" destination="01K-sm-AKe" eventType="valueChanged" id="Qs1-nc-vaX"/>
+                                </connections>
+                            </switch>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="BdF-YI-ZvD" userLabel="TFResultStack">
+                                <rect key="frame" x="215" y="86" width="194" height="71.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ProductName: Percent" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UZU-Mb-DOx" userLabel="item1">
+                                        <rect key="frame" x="0.0" y="0.0" width="194" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ProductName: Percent" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GqO-p4-gBY" userLabel="item2">
+                                        <rect key="frame" x="0.0" y="25.5" width="194" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ProductName: Percent" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rs7-GD-eUF" userLabel="item3">
+                                        <rect key="frame" x="0.0" y="51" width="194" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="hyz-Iu-4ff"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="hyz-Iu-4ff" firstAttribute="trailing" secondItem="BdF-YI-ZvD" secondAttribute="trailing" constant="5" id="5q9-iz-4BA"/>
                             <constraint firstItem="hyz-Iu-4ff" firstAttribute="trailing" secondItem="Vkq-LV-oRa" secondAttribute="trailing" id="7JP-Hd-yc5"/>
                             <constraint firstItem="Vkq-LV-oRa" firstAttribute="leading" secondItem="hyz-Iu-4ff" secondAttribute="leading" id="LjW-vs-OdP"/>
                             <constraint firstItem="Vkq-LV-oRa" firstAttribute="top" secondItem="JvK-aY-uMh" secondAttribute="bottom" constant="10" id="O64-qd-91J"/>
+                            <constraint firstItem="Pwq-S5-oTc" firstAttribute="centerX" secondItem="scf-N1-IhV" secondAttribute="centerX" id="OrH-SK-zki"/>
                             <constraint firstAttribute="bottom" secondItem="Vkq-LV-oRa" secondAttribute="bottom" id="Umh-w2-9c8"/>
                             <constraint firstItem="JvK-aY-uMh" firstAttribute="top" secondItem="qET-4i-pdl" secondAttribute="bottom" constant="10" id="VCp-80-VyY"/>
                             <constraint firstItem="JvK-aY-uMh" firstAttribute="leading" secondItem="hyz-Iu-4ff" secondAttribute="leading" constant="10" id="YgD-Zm-rAV"/>
                             <constraint firstItem="qET-4i-pdl" firstAttribute="top" secondItem="hyz-Iu-4ff" secondAttribute="top" constant="5" id="e3Z-pw-oZa"/>
+                            <constraint firstItem="Pwq-S5-oTc" firstAttribute="top" secondItem="hyz-Iu-4ff" secondAttribute="top" constant="1" id="fOy-Vl-QVn"/>
+                            <constraint firstItem="BdF-YI-ZvD" firstAttribute="leading" secondItem="JvK-aY-uMh" secondAttribute="trailing" constant="5" id="gGv-4P-t9Y"/>
                             <constraint firstAttribute="trailing" secondItem="TcE-75-1I8" secondAttribute="trailing" constant="10" id="mbk-kg-v75"/>
                             <constraint firstItem="TcE-75-1I8" firstAttribute="top" secondItem="hyz-Iu-4ff" secondAttribute="top" constant="5" id="ohA-Vd-wcF"/>
+                            <constraint firstItem="BdF-YI-ZvD" firstAttribute="top" secondItem="Pwq-S5-oTc" secondAttribute="bottom" constant="10" id="usZ-Mp-WqD"/>
                             <constraint firstItem="qET-4i-pdl" firstAttribute="leading" secondItem="hyz-Iu-4ff" secondAttribute="leading" constant="10" id="x0N-MI-6ko"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="productRankLabelStack" destination="BdF-YI-ZvD" id="aro-xL-jzX"/>
                         <outlet property="testImageView" destination="JvK-aY-uMh" id="NL8-IK-UNe"/>
                         <outlet property="testReaderView" destination="Vkq-LV-oRa" id="hab-FL-hVh"/>
                     </connections>

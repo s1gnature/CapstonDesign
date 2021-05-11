@@ -28,7 +28,7 @@ class ViewController: UIViewController {
         initQRReaderView(QRReaderView: QRReaderView)
     }
     @IBAction func TFTestBtn(_ sender: Any) {
-        let image = QRReaderView.capturePhoto()
+//        let image = QRReaderView.capturePhoto()
     }
     
     

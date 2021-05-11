@@ -22,19 +22,12 @@ protocol ReaderViewDelegate: class {
 
 class ReaderView: UIView {
     weak var delegate: ReaderViewDelegate?
-
+    var isVideoRunning = true
+    
     // 동영상 화면을 보여줄 Layer
     var previewLayer: AVCaptureVideoPreviewLayer?
     var captureSession: AVCaptureSession?
     let photoOutput = AVCapturePhotoOutput()
-
-    private var cornerLength: CGFloat = 20
-    private var cornerLineWidth: CGFloat = 6
-    private var rectOfInterest: CGRect {
-        CGRect(x: 200,
-               y: 400,
-                          width: 150, height: 300)
-    }
     
     var isRunning: Bool {
         guard let captureSession = self.captureSession else {
@@ -44,7 +37,7 @@ class ReaderView: UIView {
     }
     
     // 촬영 시 어떤 데이터를 검사할건지? - QRCode
-    let metadataObjectTypes: [AVMetadataObject.ObjectType] = [.ean8, .ean13, .code128, .code93, .code39, .code39Mod43]
+    var metadataObjectTypes: [AVMetadataObject.ObjectType] = [.ean8, .ean13, .code128, .code93, .code39, .code39Mod43]
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -114,8 +107,6 @@ class ReaderView: UIView {
     
     /// 중앙에 사각형의 Focus Zone Layer을 설정합니다.
     private func setPreviewLayer() {
-        let readingRect = rectOfInterest
-        
         guard let captureSession = self.captureSession else {
             return
         }
@@ -126,38 +117,6 @@ class ReaderView: UIView {
         let previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
         previewLayer.videoGravity = AVLayerVideoGravity.resizeAspectFill
         previewLayer.frame = self.layer.bounds
-
-        /*
-        // MARK: - Scan Focus Mask
-        /*
-         Scan 할 사각형(Focus Zone)을 구성하고 해당 자리만 dimmed 처리를 하지 않음.
-         */
-        /*
-         CAShapeLayer에서 어떠한 모양(다각형, 폴리곤 등의 도형)을 그리고자 할 때 CGPath를 사용한다.
-         즉 previewLayer에다가 ShapeLayer를 그리는데
-         ShapeLayer의 모양이 [1. bounds 크기의 사각형, 2. readingRect 크기의 사각형]
-         두개가 그려져 있는 것이다.
-         */
-        let path = CGMutablePath()
-        path.addRect(bounds)
-        path.addRect(readingRect)
-
-        /*
-         그럼 Path(경로? 모양?)은 그렸으니 Layer의 특징을 정하고 추가해보자.
-         먼저 CAShapeLayer의 path를 위에 지정한 path로 설정해주고,
-         QRReader에서 백그라운드 색이 dimmed 처리가 되어야 하므로 layer의 투명도를 0.6 정도로 설정한다.
-         단 여기서 QRCode를 읽을 부분은 dimmed 처리가 되어 있으면 안 된다.
-         이럴때 fillRule에서 evenOdd를 지정해주는데
-         Path(도형)이 겹치는 부분(여기서는 readingRect, QRCode 읽는 부분)은 fillColor의 영향을 받지 않는다
-         */
-        let maskLayer = CAShapeLayer()
-        maskLayer.path = path
-        maskLayer.fillColor = UIColor(displayP3Red: 0, green: 0, blue: 0, alpha: 0.6).cgColor
-        maskLayer.fillRule = .evenOdd
-
-//        previewLayer.addSublayer(maskLayer)
- */
-        
         
         self.layer.addSublayer(previewLayer)
         self.previewLayer = previewLayer
@@ -184,6 +143,7 @@ extension ReaderView {
     }
     
     func found(code: String) {
+        self.captureSession?.stopRunning()
         self.delegate?.readerComplete(status: .success(code))
     }
     
@@ -207,10 +167,9 @@ extension ReaderView: AVCaptureMetadataOutputObjectsDelegate {
             }
 
             AudioServicesPlaySystemSound(SystemSoundID(kSystemSoundID_Vibrate))
-//            AudioServicesPlayAlertSound(SystemSoundID(1407)) // Appstore purchase sound
             found(code: stringValue)
             print("## Found metadata Value\n + \(stringValue)\n")
-            stop(isButtonTap: true)
+//            stop(isButtonTap: true)
         }
     }
     
@@ -236,15 +195,5 @@ extension ReaderView: AVCapturePhotoCaptureDelegate {
             print("## Capture Photo Failrue")
             self.delegate?.captureComplete(image: nil)
         }
-    }
-}
-internal extension CGPoint {
-
-    // MARK: - CGPoint+offsetBy
-    func offsetBy(dx: CGFloat, dy: CGFloat) -> CGPoint {
-        var point = self
-        point.x += dx
-        point.y += dy
-        return point
     }
 }
