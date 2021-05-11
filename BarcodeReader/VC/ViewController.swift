@@ -11,13 +11,13 @@ import AVFoundation
 class ViewController: UIViewController {
 
     @IBOutlet var QRReaderView: ReaderView!
+    @IBOutlet var testImageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.QRReaderView.delegate = self
         self.view.addSubview(QRReaderView)
-
     }
     override func viewDidAppear(_ animated: Bool) {
 
@@ -26,8 +26,9 @@ class ViewController: UIViewController {
         initQRReaderView(QRReaderView: QRReaderView)
     }
     @IBAction func TFTestBtn(_ sender: Any) {
-        
+        let image = QRReaderView.capturePhoto()
     }
+    
     
 }
 
@@ -38,6 +39,10 @@ private func initQRReaderView(QRReaderView: ReaderView){
 
 // MARK: - ReaderView
 extension ViewController: ReaderViewDelegate {
+    func captureComplete(image: UIImage?) {
+        self.testImageView.image = image
+    }
+    
     func readerComplete(status: ReaderStatus) {
         var title = ""
         var message = ""
