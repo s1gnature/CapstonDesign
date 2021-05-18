@@ -18,8 +18,6 @@
 
 License
 ----
-MIT
-Copyright © 2019 [찰랑말랑 of NEXTERS](https://github.com/nexters-colary)
 
 
 [![N|Solid](https://cldup.com/dTxpPi9lDf.thumb.png)](https://nodesource.com/products/nsolid)
