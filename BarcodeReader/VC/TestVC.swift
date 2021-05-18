@@ -60,16 +60,22 @@ private func initReaderView(readerView: ReaderView){
 // MARK: - ReaderView
 extension TestVC: ReaderViewDelegate {
     func captureComplete(image: UIImage?) {
-        guard let image = image else {
+        guard let image = image?.resized(to: CGSize(width: 224, height: 224)) else {
             print("## Captured Image is Nil")
             return
         }
-        self.testImageView.image = UIImage(named: "sprite")!
-        guard let buffer = CVImageBuffer.buffer(from: UIImage(named: "sprite")!) else {
+//        var imageData = UIImage(named: "coke")
+        self.testImageView.image = image
+        guard let buffer = CVImageBuffer.buffer(from: image) else {
+            return
+        }
+        guard let imageBuffer = getBuffer(from: image) else {
+            print("## ???")
             return
         }
         if let result = modelDataHandler?.runModel(onFrame: buffer) {
             dump(result)
+            
             for idx in 0..<3 {
                 let label = productRankLabelStack.arrangedSubviews[idx] as! UILabel
                 label.text = "\(result.inferences[idx].label): \(result.inferences[idx].confidence * 100)%"

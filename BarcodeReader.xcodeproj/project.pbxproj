@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		709304DBDE4E6E483A440D77 /* Pods_BarcodeReader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2741C6FDB76F6447294C3DA8 /* Pods_BarcodeReader.framework */; };
 		FA219FC026492058004C53E6 /* ReaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA219FBF26492058004C53E6 /* ReaderView.swift */; };
-		FA219FC826492968004C53E6 /* labels.txt in Resources */ = {isa = PBXBuildFile; fileRef = FA219FC626492968004C53E6 /* labels.txt */; };
-		FA219FC926492968004C53E6 /* model.tflite in Resources */ = {isa = PBXBuildFile; fileRef = FA219FC726492968004C53E6 /* model.tflite */; };
 		FA219FCC26492B24004C53E6 /* ModelDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA219FCB26492B23004C53E6 /* ModelDataHandler.swift */; };
 		FA219FD326492C4F004C53E6 /* CVPixelBufferExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA219FD226492C4F004C53E6 /* CVPixelBufferExtension.swift */; };
 		FA219FD726492DBB004C53E6 /* TestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA219FD626492DBB004C53E6 /* TestVC.swift */; };
@@ -21,6 +19,8 @@
 		FABF2539261C3FC60059F678 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FABF2537261C3FC60059F678 /* Main.storyboard */; };
 		FABF253B261C3FC70059F678 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FABF253A261C3FC70059F678 /* Assets.xcassets */; };
 		FABF253E261C3FC70059F678 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FABF253C261C3FC70059F678 /* LaunchScreen.storyboard */; };
+		FAD5490D26538B2800664073 /* labels_q.txt in Resources */ = {isa = PBXBuildFile; fileRef = FAD5490B26538B2700664073 /* labels_q.txt */; };
+		FAD5490E26538B2800664073 /* model_quant_int8.tflite in Resources */ = {isa = PBXBuildFile; fileRef = FAD5490C26538B2800664073 /* model_quant_int8.tflite */; };
 		FAEB26F626272E0000C09108 /* ServerAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEB26F526272E0000C09108 /* ServerAddress.swift */; };
 		FAEB26F926272E1D00C09108 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEB26F826272E1D00C09108 /* Networking.swift */; };
 		FAEB26FD26272FE500C09108 /* ProductVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEB26FC26272FE500C09108 /* ProductVO.swift */; };
@@ -34,8 +34,6 @@
 		FA219FBF26492058004C53E6 /* ReaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReaderView.swift; sourceTree = "<group>"; };
 		FA219FC3264925D3004C53E6 /* ko */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = ko; path = ko.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FA219FC4264925D4004C53E6 /* ko */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = ko; path = ko.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		FA219FC626492968004C53E6 /* labels.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = labels.txt; sourceTree = "<group>"; };
-		FA219FC726492968004C53E6 /* model.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; path = model.tflite; sourceTree = "<group>"; };
 		FA219FCB26492B23004C53E6 /* ModelDataHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelDataHandler.swift; sourceTree = "<group>"; };
 		FA219FD226492C4F004C53E6 /* CVPixelBufferExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CVPixelBufferExtension.swift; sourceTree = "<group>"; };
 		FA219FD626492DBB004C53E6 /* TestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestVC.swift; sourceTree = "<group>"; };
@@ -49,6 +47,8 @@
 		FABF2535261C3FC60059F678 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FABF253A261C3FC70059F678 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FABF253F261C3FC70059F678 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAD5490B26538B2700664073 /* labels_q.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = labels_q.txt; sourceTree = "<group>"; };
+		FAD5490C26538B2800664073 /* model_quant_int8.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; path = model_quant_int8.tflite; sourceTree = "<group>"; };
 		FAEB26F526272E0000C09108 /* ServerAddress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerAddress.swift; sourceTree = "<group>"; };
 		FAEB26F826272E1D00C09108 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		FAEB26FC26272FE500C09108 /* ProductVO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductVO.swift; sourceTree = "<group>"; };
@@ -90,8 +90,8 @@
 		FA219FC526492948004C53E6 /* TFModel */ = {
 			isa = PBXGroup;
 			children = (
-				FA219FC626492968004C53E6 /* labels.txt */,
-				FA219FC726492968004C53E6 /* model.tflite */,
+				FAD5490B26538B2700664073 /* labels_q.txt */,
+				FAD5490C26538B2800664073 /* model_quant_int8.tflite */,
 			);
 			path = TFModel;
 			sourceTree = "<group>";
@@ -245,11 +245,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA219FC926492968004C53E6 /* model.tflite in Resources */,
 				FABF253E261C3FC70059F678 /* LaunchScreen.storyboard in Resources */,
+				FAD5490D26538B2800664073 /* labels_q.txt in Resources */,
+				FAD5490E26538B2800664073 /* model_quant_int8.tflite in Resources */,
 				FABF253B261C3FC70059F678 /* Assets.xcassets in Resources */,
 				FABF2539261C3FC60059F678 /* Main.storyboard in Resources */,
-				FA219FC826492968004C53E6 /* labels.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

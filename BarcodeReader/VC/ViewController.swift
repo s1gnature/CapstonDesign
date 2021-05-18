@@ -20,6 +20,7 @@ class ViewController: UIViewController {
     }
     override func viewDidAppear(_ animated: Bool) {
         QRReaderView.start()
+//        TTS().setText("상품을 안내 음성이 나오기 전까지 천천히 인식해 주세요.")
     }
     override func viewWillDisappear(_ animated: Bool) {
         QRReaderView.stop(isButtonTap: true)
@@ -28,7 +29,7 @@ class ViewController: UIViewController {
         initQRReaderView(QRReaderView: QRReaderView)
     }
     @IBAction func TFTestBtn(_ sender: Any) {
-//        let image = QRReaderView.capturePhoto()
+//        let image = QRReaderView.capturePhoto()                   
     }
     
     

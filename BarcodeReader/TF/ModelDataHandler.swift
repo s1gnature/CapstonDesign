@@ -34,8 +34,8 @@ typealias FileInfo = (name: String, extension: String)
 
 /// Information about the MobileNet model.
 enum MobileNet {
-  static let modelInfo: FileInfo = (name: "model", extension: "tflite")
-  static let labelsInfo: FileInfo = (name: "labels", extension: "txt")
+  static let modelInfo: FileInfo = (name: "model_quant_int8", extension: "tflite")
+  static let labelsInfo: FileInfo = (name: "labels_q", extension: "txt")
 }
 
 /// This class handles all data preprocessing and makes calls to run inference on a given frame
@@ -49,7 +49,7 @@ class ModelDataHandler {
   let threadCount: Int
 
   let resultCount = 3
-  let threadCountLimit = 10
+  let threadCountLimit = 3
 
   // MARK: - Model Parameters
 
@@ -118,28 +118,32 @@ class ModelDataHandler {
 
     // Crops the image to the biggest square in the center and scales it down to model dimensions.
     let scaledSize = CGSize(width: inputWidth, height: inputHeight)
-    guard let thumbnailPixelBuffer = pixelBuffer.centerThumbnail(ofSize: scaledSize) else {
-      return nil
-    }
-
+    
+//    guard let thumbnailPixelBuffer = pixelBuffer.centerThumbnail(ofSize: scaledSize) else {
+//      return nil
+//    }
+    
     let interval: TimeInterval
     let outputTensor: Tensor
+    
     do {
       let inputTensor = try interpreter.input(at: 0)
-
+        
+        print("## Input isQuantized?")
+        print(inputTensor.dataType)
       // Remove the alpha component from the image buffer to get the RGB data.
       guard let rgbData = rgbDataFromBuffer(
-        thumbnailPixelBuffer,
+        pixelBuffer,
         byteCount: batchSize * inputWidth * inputHeight * inputChannels,
         isModelQuantized: inputTensor.dataType == .uInt8
       ) else {
         print("Failed to convert the image buffer to RGB data.")
         return nil
       }
-
+ 
       // Copy the RGB data to the input `Tensor`.
       try interpreter.copy(rgbData, toInputAt: 0)
-
+        
       // Run inference by invoking the `Interpreter`.
       let startDate = Date()
       try interpreter.invoke()
@@ -153,6 +157,8 @@ class ModelDataHandler {
     }
 
     let results: [Float]
+    print("## Output Quantized?")
+    print(outputTensor.dataType)
     switch outputTensor.dataType {
     case .uInt8:
       guard let quantization = outputTensor.quantizationParameters else {
@@ -255,7 +261,7 @@ class ModelDataHandler {
                                           height: vImagePixelCount(height),
                                           width: vImagePixelCount(width),
                                           rowBytes: destinationBytesPerRow)
-
+    
     let pixelBufferFormat = CVPixelBufferGetPixelFormatType(buffer)
 
     switch (pixelBufferFormat) {
@@ -279,7 +285,8 @@ class ModelDataHandler {
     let bytes = Array<UInt8>(unsafeData: byteData)!
     var floats = [Float]()
     for i in 0..<bytes.count {
-        floats.append(Float(bytes[i]) / 255.0)
+//        floats.append(Float(bytes[i]) / 255.0)
+        floats.append((Float(bytes[i]) / 127.5)/127.5)
     }
     return Data(copyingBufferOf: floats)
   }

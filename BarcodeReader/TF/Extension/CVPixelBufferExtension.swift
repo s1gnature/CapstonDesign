@@ -104,13 +104,21 @@ extension CVPixelBuffer {
     ] as CFDictionary
 
     var pixelBuffer: CVPixelBuffer?
+    /*
     let status = CVPixelBufferCreate(kCFAllocatorDefault,
                                      Int(image.size.width),
                                      Int(image.size.height),
                                      kCVPixelFormatType_32BGRA,
                                      attrs,
                                      &pixelBuffer)
-
+*/
+    let status = CVPixelBufferCreate(kCFAllocatorDefault,
+                                     Int(image.size.width),
+                                     Int(image.size.height),
+                                     kCVPixelFormatType_32ARGB,
+                                     attrs,
+                                     &pixelBuffer)
+    
     guard let buffer = pixelBuffer, status == kCVReturnSuccess else {
       return nil
     }
