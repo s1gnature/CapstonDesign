@@ -14,7 +14,7 @@
 - [QRReader](https://github.com/s1gnature/INU_Corona_QRReader) 를 레퍼런스로 한 BarcodeReader View 
   - AVMetaDataObject.ObjectType: [ean8, ean13]
 - TFLite Model Quantazation Type: uInt8
-- TTS Class: AVutterance, AVSpeechSynthesizer
+- TTS: AVutterance, AVSpeechSynthesizer
 
 License
 ----
