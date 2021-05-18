@@ -4,7 +4,7 @@
 - 
 
 #### 졸업작품 제출 및 기능 설명
-[졸업작품 제출 링크](https://apps.apple.com/kr/app/찰랑말랑/id1477694079)
+- [졸업작품 제출 링크](https://apps.apple.com/kr/app/찰랑말랑/id1477694079)
 
 #### Library
 - [TFLite](https://www.tensorflow.org/lite?hl=ko)
