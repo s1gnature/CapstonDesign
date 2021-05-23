@@ -20,7 +20,7 @@ class ViewController: UIViewController {
     }
     override func viewDidAppear(_ animated: Bool) {
         QRReaderView.start()
-//        TTS().setText("상품을 안내 음성이 나오기 전까지 천천히 인식해 주세요.")
+        TTS().setText("원하시는 상품을 인식해 주세요.")
     }
     override func viewWillDisappear(_ animated: Bool) {
         QRReaderView.stop(isButtonTap: true)
@@ -66,12 +66,13 @@ extension ViewController: ReaderViewDelegate {
             
             let statusCode = NetworkManager().searchBarcode(barcode: code) { (value) in
                 productValue = value
-                print(productValue?.stringValue())
+//                print(productValue?.stringValue())
             }
             switch statusCode {
             case .success:
+                // 화면에 안내 알림 표시
                 alert = UIAlertController(title: "", message: productValue!.stringValue(), preferredStyle: .alert)
-                print(productValue!.stringValue())
+                // 안내 음성 출력
                 TTS().setText(productValue!.ttsValue())
             case .fail:
                 alert = UIAlertController(title: "", message: "정보가 없는 식음료 입니다", preferredStyle: .alert)

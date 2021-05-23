@@ -13,14 +13,14 @@
 		FA219FD326492C4F004C53E6 /* CVPixelBufferExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA219FD226492C4F004C53E6 /* CVPixelBufferExtension.swift */; };
 		FA219FD726492DBB004C53E6 /* TestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA219FD626492DBB004C53E6 /* TestVC.swift */; };
 		FA43B74D263D6C3D0026E7A9 /* TTS.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA43B74C263D6C3D0026E7A9 /* TTS.swift */; };
+		FA4D8F16265A4C27006BB39D /* model_quant_int8_2.tflite in Resources */ = {isa = PBXBuildFile; fileRef = FA4D8F14265A4C27006BB39D /* model_quant_int8_2.tflite */; };
+		FA4D8F17265A4C27006BB39D /* labels_q.txt in Resources */ = {isa = PBXBuildFile; fileRef = FA4D8F15265A4C27006BB39D /* labels_q.txt */; };
 		FABF2532261C3FC60059F678 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABF2531261C3FC60059F678 /* AppDelegate.swift */; };
 		FABF2534261C3FC60059F678 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABF2533261C3FC60059F678 /* SceneDelegate.swift */; };
 		FABF2536261C3FC60059F678 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABF2535261C3FC60059F678 /* ViewController.swift */; };
 		FABF2539261C3FC60059F678 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FABF2537261C3FC60059F678 /* Main.storyboard */; };
 		FABF253B261C3FC70059F678 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FABF253A261C3FC70059F678 /* Assets.xcassets */; };
 		FABF253E261C3FC70059F678 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FABF253C261C3FC70059F678 /* LaunchScreen.storyboard */; };
-		FAD5490D26538B2800664073 /* labels_q.txt in Resources */ = {isa = PBXBuildFile; fileRef = FAD5490B26538B2700664073 /* labels_q.txt */; };
-		FAD5490E26538B2800664073 /* model_quant_int8.tflite in Resources */ = {isa = PBXBuildFile; fileRef = FAD5490C26538B2800664073 /* model_quant_int8.tflite */; };
 		FAEB26F626272E0000C09108 /* ServerAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEB26F526272E0000C09108 /* ServerAddress.swift */; };
 		FAEB26F926272E1D00C09108 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEB26F826272E1D00C09108 /* Networking.swift */; };
 		FAEB26FD26272FE500C09108 /* ProductVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEB26FC26272FE500C09108 /* ProductVO.swift */; };
@@ -38,6 +38,8 @@
 		FA219FD226492C4F004C53E6 /* CVPixelBufferExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CVPixelBufferExtension.swift; sourceTree = "<group>"; };
 		FA219FD626492DBB004C53E6 /* TestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestVC.swift; sourceTree = "<group>"; };
 		FA43B74C263D6C3D0026E7A9 /* TTS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTS.swift; sourceTree = "<group>"; };
+		FA4D8F14265A4C27006BB39D /* model_quant_int8_2.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; path = model_quant_int8_2.tflite; sourceTree = "<group>"; };
+		FA4D8F15265A4C27006BB39D /* labels_q.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = labels_q.txt; sourceTree = "<group>"; };
 		FA609BEC263EAC8C008DAC89 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		FA609BEE263EAC95008DAC89 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
 		FA609BF0263EAC9C008DAC89 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
@@ -47,8 +49,6 @@
 		FABF2535261C3FC60059F678 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FABF253A261C3FC70059F678 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FABF253F261C3FC70059F678 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FAD5490B26538B2700664073 /* labels_q.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = labels_q.txt; sourceTree = "<group>"; };
-		FAD5490C26538B2800664073 /* model_quant_int8.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; path = model_quant_int8.tflite; sourceTree = "<group>"; };
 		FAEB26F526272E0000C09108 /* ServerAddress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerAddress.swift; sourceTree = "<group>"; };
 		FAEB26F826272E1D00C09108 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		FAEB26FC26272FE500C09108 /* ProductVO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductVO.swift; sourceTree = "<group>"; };
@@ -90,8 +90,8 @@
 		FA219FC526492948004C53E6 /* TFModel */ = {
 			isa = PBXGroup;
 			children = (
-				FAD5490B26538B2700664073 /* labels_q.txt */,
-				FAD5490C26538B2800664073 /* model_quant_int8.tflite */,
+				FA4D8F15265A4C27006BB39D /* labels_q.txt */,
+				FA4D8F14265A4C27006BB39D /* model_quant_int8_2.tflite */,
 			);
 			path = TFModel;
 			sourceTree = "<group>";
@@ -246,10 +246,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				FABF253E261C3FC70059F678 /* LaunchScreen.storyboard in Resources */,
-				FAD5490D26538B2800664073 /* labels_q.txt in Resources */,
-				FAD5490E26538B2800664073 /* model_quant_int8.tflite in Resources */,
 				FABF253B261C3FC70059F678 /* Assets.xcassets in Resources */,
 				FABF2539261C3FC60059F678 /* Main.storyboard in Resources */,
+				FA4D8F16265A4C27006BB39D /* model_quant_int8_2.tflite in Resources */,
+				FA4D8F17265A4C27006BB39D /* labels_q.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

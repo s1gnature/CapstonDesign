@@ -34,7 +34,7 @@ typealias FileInfo = (name: String, extension: String)
 
 /// Information about the MobileNet model.
 enum MobileNet {
-  static let modelInfo: FileInfo = (name: "model_quant_int8", extension: "tflite")
+  static let modelInfo: FileInfo = (name: "model_quant_int8_2", extension: "tflite")
   static let labelsInfo: FileInfo = (name: "labels_q", extension: "txt")
 }
 
@@ -128,9 +128,7 @@ class ModelDataHandler {
     
     do {
       let inputTensor = try interpreter.input(at: 0)
-        
-        print("## Input isQuantized?")
-        print(inputTensor.dataType)
+
       // Remove the alpha component from the image buffer to get the RGB data.
       guard let rgbData = rgbDataFromBuffer(
         pixelBuffer,
@@ -157,8 +155,7 @@ class ModelDataHandler {
     }
 
     let results: [Float]
-    print("## Output Quantized?")
-    print(outputTensor.dataType)
+    
     switch outputTensor.dataType {
     case .uInt8:
       guard let quantization = outputTensor.quantizationParameters else {

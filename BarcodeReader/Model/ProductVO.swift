@@ -24,10 +24,10 @@ struct ProductVO: Codable {
     }
     
     func stringValue() -> String {
-        return "\(barcode)\n\(productName)\n\(categoryName)\n\(categoryDetailName)"
+        return "바코드 번호: \(barcode)\n제품명: \(productName)\n분류: \(categoryDetailName)"
     }
     func ttsValue() -> String {
-        return "\(productName). \(categoryName). \(categoryDetailName)."
+        return "\(productName). \(categoryDetailName)."
     }
 }
 

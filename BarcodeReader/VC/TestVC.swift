@@ -14,33 +14,33 @@ class TestVC: UIViewController {
     @IBOutlet var testImageView: UIImageView!
     @IBOutlet var productRankLabelStack: UIStackView!
     
+    private var timer: Timer!
     private var modelDataHandler = ModelDataHandler(modelFileInfo: MobileNet.modelInfo, labelsFileInfo: MobileNet.labelsInfo)
     
     override func viewDidLoad() {
         self.testReaderView.delegate = self
         self.view.addSubview(testReaderView)
+        
+        TTS().setText("원하시는 상품을 인식해 주세요.")
+        
+        timer = Timer.scheduledTimer(withTimeInterval: 2, repeats: true, block: {(_) in
+            self.testReaderView.capturePhoto()
+        })
+        timer.fire()
     }
     override func viewDidLayoutSubviews() {
         initReaderView(readerView: testReaderView)
     }
     
     @IBAction func videoRunningSwitch(_ sender: UISwitch) {
-        /*
         if sender.isOn {
-            testReaderView.isVideoRunning = true
-            let metadataOutput = AVCaptureMetadataOutput()
-            metadataOutput.metadataObjectTypes = [.ean8, .ean13, .code128, .code93, .code39, .code39Mod43]
-            metadataOutput.setMetadataObjectsDelegate(testReaderView, queue: DispatchQueue.main)
-            testReaderView.captureSession?.addOutput(metadataOutput)
+            timer.fire()
+            print("## Capture Timer ON")
         }
         else {
-            testReaderView.isVideoRunning = false
-            let metadataOutput = AVCaptureMetadataOutput()
-            metadataOutput.metadataObjectTypes = [.ean8, .ean13, .code128, .code93, .code39, .code39Mod43]
-            metadataOutput.setMetadataObjectsDelegate(testReaderView, queue: DispatchQueue.main)
-            testReaderView.captureSession?.removeOutput(metadataOutput)
+            timer.invalidate()
+            print("## Capture Timer OFF")
         }
- */
     }
     @IBAction func backBtn(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
@@ -69,10 +69,7 @@ extension TestVC: ReaderViewDelegate {
         guard let buffer = CVImageBuffer.buffer(from: image) else {
             return
         }
-        guard let imageBuffer = getBuffer(from: image) else {
-            print("## ???")
-            return
-        }
+
         if let result = modelDataHandler?.runModel(onFrame: buffer) {
             dump(result)
             

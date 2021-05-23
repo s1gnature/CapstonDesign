@@ -7,4 +7,4 @@
 
 import Foundation
 
-let serverAddress = "http://3.34.50.154:3000/search/barcode?barcode="
+let serverAddress = "http://3.34.50.154:3000/search/barcode1?barcode="

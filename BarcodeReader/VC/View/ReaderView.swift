@@ -37,7 +37,7 @@ class ReaderView: UIView {
     }
     
     // 촬영 시 어떤 데이터를 검사할건지? - QRCode
-    var metadataObjectTypes: [AVMetadataObject.ObjectType] = [.ean8, .ean13, .code128, .code93, .code39, .code39Mod43]
+    var metadataObjectTypes: [AVMetadataObject.ObjectType] = [.ean8, .ean13]
     
     override init(frame: CGRect) {
         super.init(frame: frame)

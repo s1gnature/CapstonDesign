@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KE9-B4-gkm" customClass="ReaderView" customModule="BarcodeReader" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="94" width="414" height="802"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gtU-QH-X2a">
@@ -36,7 +36,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="KE9-B4-gkm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="EeS-12-R3V"/>
-                            <constraint firstItem="KE9-B4-gkm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="SYr-bj-3X6"/>
+                            <constraint firstItem="KE9-B4-gkm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="SYr-bj-3X6"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KE9-B4-gkm" secondAttribute="trailing" id="fTT-wK-mKw"/>
                             <constraint firstAttribute="bottom" secondItem="KE9-B4-gkm" secondAttribute="bottom" id="ri6-0x-mZk"/>
                         </constraints>
