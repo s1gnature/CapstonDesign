@@ -5,6 +5,7 @@
 ![스크린샷 2021-06-29 오후 12 26 09](https://user-images.githubusercontent.com/48645631/123732792-693a6380-d8d5-11eb-9980-a0a042ad8112.png)
 
 #### WorkFlow
+디바이스 화면 녹화 \t \t TFLite Inference Log
 ![ezgif com-resize](https://user-images.githubusercontent.com/48645631/123733751-12358e00-d8d7-11eb-8871-0719aabb4f45.gif) ![칠성사이다 추론 자료](https://user-images.githubusercontent.com/48645631/123734611-9c322680-d8d8-11eb-8fe4-8ef998ba2beb.gif)
 
 - Flow (1~4 반복)
