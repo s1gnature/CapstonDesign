@@ -1,7 +1,7 @@
 # 인천대학교 캡스톤디자인 졸업작품<br>
 > 시각장애인을 위한 제품 정보 안내<br>
 
-#### 시연
+#### 발표 
 - 
 [![시연 영상](http://img.youtube.com/vi/n_91SqxkM08/0.jpg)](https://youtu.be/n_91SqxkM08) 
 
