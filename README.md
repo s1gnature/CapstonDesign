@@ -6,7 +6,7 @@
 [![시연 영상](http://img.youtube.com/vi/n_91SqxkM08/0.jpg)](https://youtu.be/n_91SqxkM08) 
 
 #### 졸업작품 제출 및 기능 설명
-- [졸업작품 제출 링크](https://apps.apple.com/kr/app/찰랑말랑/id1477694079)
+- [](http://www.ideaboom.net/page/project_detail.php?seq=2128)
 
 #### Library
 - [TFLite](https://www.tensorflow.org/lite?hl=ko)
