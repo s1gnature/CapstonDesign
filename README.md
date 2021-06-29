@@ -6,7 +6,7 @@
 
 #### WorkFlow
 ![ezgif com-resize](https://user-images.githubusercontent.com/48645631/123733751-12358e00-d8d7-11eb-8871-0719aabb4f45.gif) ![칠성사이다 추론 자료](https://user-images.githubusercontent.com/48645631/123734611-9c322680-d8d8-11eb-8fe4-8ef998ba2beb.gif)
-_디바이스 화면 녹화_                        _TFLite Inference Log_
+<br>_디바이스 화면 녹화_　　　　　　　　　_TFLite Inference Log_
 
 - Flow (1~4 반복)
   1. 제품의 정보를 카메라를 통해 리딩합니다. 앱 실행 시 즉시 시작합니다.
