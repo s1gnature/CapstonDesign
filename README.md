@@ -29,8 +29,8 @@
     > 이후 Focus Zone을 안내하는 UI를 그려놓은 AVCaptureVideoPreviewLayer를 제거함
     
 #### 후기
-여태 토이 프로젝트나 해온 프로젝트가 카메라를 이용하는 기능들이 없어 구현하는데에 많은 자료를 참고하고 시간을 들였었다. 특히 저번에 미리 구현해놓은 QRReader가 많은 도움이 되었고 Layer나 BezierPath 등의 무언가를 그리는 작업이 굉장히 까다로웠다. 또한 AVCaptureSession에서 캡쳐를 시작하거나, 캡쳐를 성공했을 때 데이터를 ViewController로 넘겨주는 등의 작업을 위해서 Protocol, Delegate Pattern에 대한 이해가 더욱 잘 되었던 프로젝트 였다.
-다만 완성도가 기대에 비해 많이 떨어졌고(TF 모델의 성능에 대한) 발전 가능성이 있는 작품인 만큼 개선을 통해 더 나은 사용성을 제공하고 싶은 생각이 든다.
+> 여태 토이 프로젝트나 해온 프로젝트가 카메라를 이용하는 기능들이 없어 구현하는데에 많은 자료를 참고하고 시간을 들였었다. 특히 저번에 미리 구현해놓은 QRReader가 많> 은 도움이 되었고 Layer나 BezierPath 등의 무언가를 그리는 작업이 굉장히 까다로웠다. 또한 AVCaptureSession에서 캡쳐를 시작하거나, 캡쳐를 성공했을 때 데이터를 ViewController로 넘겨주는 등의 작업을 위해서 Protocol, Delegate Pattern에 대한 이해가 더욱 잘 되었던 프로젝트 였다.
+> 다만 완성도가 기대에 비해 많이 떨어졌고(TF 모델의 성능에 대한) 발전 가능성이 있는 작품인 만큼 개선을 통해 더 나은 사용성을 제공하고 싶은 생각이 든다.
 
 #### 발표 
 [![시연 영상](http://img.youtube.com/vi/n_91SqxkM08/0.jpg)](https://youtu.be/n_91SqxkM08) 
