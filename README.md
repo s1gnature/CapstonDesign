@@ -5,7 +5,8 @@
 ![스크린샷 2021-06-29 오후 12 26 09](https://user-images.githubusercontent.com/48645631/123732792-693a6380-d8d5-11eb-9980-a0a042ad8112.png)
 
 #### WorkFlow
-![ezgif com-resize](https://user-images.githubusercontent.com/48645631/123733751-12358e00-d8d7-11eb-8871-0719aabb4f45.gif)
+![ezgif com-resize](https://user-images.githubusercontent.com/48645631/123733751-12358e00-d8d7-11eb-8871-0719aabb4f45.gif) ![칠성사이다 추론 자료](https://user-images.githubusercontent.com/48645631/123734611-9c322680-d8d8-11eb-8fe4-8ef998ba2beb.gif)
+
 - Flow (1~4 반복)
   1. 제품의 정보를 카메라를 통해 리딩합니다. 앱 실행 시 즉시 시작합니다.
   2. 바코드 또는 이미지를 통해 제품의 정보를 리딩 후 제품의 정보를 요청합니다.
