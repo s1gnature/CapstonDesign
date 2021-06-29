@@ -18,7 +18,20 @@
   1. 바코드와 ImageClassification 중 우선 순위는 바코드
   2. 현재 보여지는 카메라 View에서 3초 간격으로 화면을 캡처 후 inference를 시작합니다. 이 때 80% 이상의 confidence에 대해서만 신뢰
   3. _[미구현]_ 이미지 캡처의 성능 향상을 위해 이미지를 캐싱하여 가지고 있다가 바코드에 대한 인식이 성공할 경우, 해당하는 제품과 이미지를 TF 모델 향상에 이용
- 
+
+#### TroubleShooting
+  1. TFLite 모델의 Inference가 현저히 떨어지는 현상
+    > TFLite iOS의 image size가 32x32로 크롭한 후 input으로 사용되는 것을 확인
+    > model 학습 시 제품의 전체 사진, resizing 된 사진, 제품의 중간 부분의 사진(_key point, 제품의 특징이 담긴 사진_)을 추가 학습
+  2. AVCaptureMetadataOutput().rectOfInterest의 화면 전체화
+    > 레퍼런스로 사용한 기존의 리딩([QRReader](https://github.com/s1gnature/INU_Corona_QRReader))은 화면 중앙에서만 인식이 가능했음
+    > rectOfInterest를 제거하면 구역이 전체 화면이 됨
+    > 이후 Focus Zone을 안내하는 UI를 그려놓은 AVCaptureVideoPreviewLayer를 제거함
+    
+#### 후기
+여태 토이 프로젝트나 해온 프로젝트가 카메라를 이용하는 기능들이 없어 구현하는데에 많은 자료를 참고하고 시간을 들였었다. 특히 저번에 미리 구현해놓은 QRReader가 많은 도움이 되었고 Layer나 BezierPath 등의 무언가를 그리는 작업이 굉장히 까다로웠다. 또한 AVCaptureSession에서 캡쳐를 시작하거나, 캡쳐를 성공했을 때 데이터를 ViewController로 넘겨주는 등의 작업을 위해서 Protocol, Delegate Pattern에 대한 이해가 더욱 잘 되었던 프로젝트 였다.
+다만 완성도가 기대에 비해 많이 떨어졌고(TF 모델의 성능에 대한) 발전 가능성이 있는 작품인 만큼 개선을 통해 더 나은 사용성을 제공하고 싶은 생각이 든다.
+
 #### 발표 
 [![시연 영상](http://img.youtube.com/vi/n_91SqxkM08/0.jpg)](https://youtu.be/n_91SqxkM08) 
 
