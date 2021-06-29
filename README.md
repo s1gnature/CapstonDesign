@@ -2,7 +2,8 @@
 > 시각장애인을 위한 제품 정보 안내<br>
 
 #### 시연
-- [![시연 영상](http://img.youtube.com/vi/n_91SqxkM08/0.jpg)](https://youtu.be/n_91SqxkM08) 
+- 
+[![시연 영상](http://img.youtube.com/vi/n_91SqxkM08/0.jpg)](https://youtu.be/n_91SqxkM08) 
 
 #### 졸업작품 제출 및 기능 설명
 - [졸업작품 제출 링크](https://apps.apple.com/kr/app/찰랑말랑/id1477694079)
